@@ -17,6 +17,7 @@ public class BubbleSort {
     public static void main(String[] args){
         int [] simpleArray = {0, 3, 4, 5, 1, 7, 8,10, 9, 2, 6};
         int [] sortedArray = bubbleSort(simpleArray);
+        
         for(int element : sortedArray){
             System.out.print(element + " ");
         }
