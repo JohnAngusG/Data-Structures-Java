@@ -18,26 +18,33 @@ public class TwoSum {
      * 
      * 
     */
-    static int[] twoSum(int[] nums, int target) {
-            int i;
-            int j = 1;
-            for (i = 0; i < nums.length - 1; i++){
-                for(; j < nums.length - 1; j++){
-                    int sum = nums[i] + nums[j];
-                    if (sum == target){
-                        break;
-                    }
-                }
-            }
-            int [] solution = {nums[i], nums[j]};
-            return solution;
-        }
+    // static int[] twoSum(int[] nums, int target) {
+    //         int i;
+    //         for (i = 0; i < nums.length - 1; i++){
+                
+    //         }
+    //         int [] solution = {nums[i], nums[i+1];
+    //         return solution;
+    //     }
 
     public static void main(String[] args){
-        int [] exampleArray = {1, 2, 3, 4, 5};
-        int [] example = twoSum(exampleArray, 7);
+        int [] exampleArray = {2,5,5,11};
+        int i;
+        int j;
+        int target = 10;
+        int [] solutionList = new int[2];
+        for (i = 0; i < exampleArray.length -1; i++){
+            for(j = 1; j < exampleArray.length; j++){
+                int sum = exampleArray[i] + exampleArray[j];
+                if (sum == target && i != j){
+                    solutionList[0] = i;
+                    solutionList[1]= j;
 
-        System.out.println(Arrays.toString(example));
+                }
+            }
+        }
+        System.out.println(Arrays.toString(solutionList));
+        
 
 
     }
