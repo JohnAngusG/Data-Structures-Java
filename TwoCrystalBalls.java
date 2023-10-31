@@ -20,9 +20,11 @@ public class TwoCrystalBalls {
     }
 
     public static void main(String[] args){
-        boolean [] my_array = {false, false, false, false, false, false, false, false, true, true, true, true};        
-        System.out.println(sqrtNSearch(my_array));
+        // boolean [] my_array = {false, false, false, false, false, false, false, false, true, true, true, true};        
+        // System.out.println(sqrtNSearch(my_array));
         
+        String my_example = "Hello this is my string example";
+        System.out.println(my_example.indexOf("this"));
 
     }
 }

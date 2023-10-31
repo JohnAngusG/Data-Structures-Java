@@ -29,12 +29,30 @@ public class TwoSum {
 
     public static void main(String[] args){
         int [] exampleArray = {2,5,5,11};
-        int i;
-        int j;
+    //     int i;
+    //     int j;
+    //     int target = 10;
+    //     int [] solutionList = new int[2];
+    //     for (i = 0; i < exampleArray.length -1; i++){
+    //         for(j = 1; j < exampleArray.length; j++){
+    //             int sum = exampleArray[i] + exampleArray[j];
+    //             if (sum == target && i != j){
+    //                 solutionList[0] = i;
+    //                 solutionList[1]= j;
+
+    //             }
+    //         }
+    //     }
+    //     System.out.println(Arrays.toString(solutionList));
+        
+
+    // To make code more efficient I would have to loop from i+1 onwards in the second loop. 
+        int i = 0;
+        int j = i + 1;
         int target = 10;
         int [] solutionList = new int[2];
-        for (i = 0; i < exampleArray.length -1; i++){
-            for(j = 1; j < exampleArray.length; j++){
+        for (; i < exampleArray.length -1; i++){
+            for(; j < exampleArray.length;){
                 int sum = exampleArray[i] + exampleArray[j];
                 if (sum == target && i != j){
                     solutionList[0] = i;
@@ -44,8 +62,6 @@ public class TwoSum {
             }
         }
         System.out.println(Arrays.toString(solutionList));
-        
-
 
     }
 }
