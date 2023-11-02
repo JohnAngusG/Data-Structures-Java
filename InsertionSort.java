@@ -8,17 +8,18 @@ public class InsertionSort{
             int position = i - 1;                   // taking value TO THE LEFT of where I am initially looking at each loop. 
 
             // this is what shift the array to the right.
-            while (position >= 0){                  // DONT UNDERSTAND THIS ONE, WHY DOES IT GO BELOW 0 EVER?
-                if (array[position] > temp){                    
-                    array[position + 1] = array[position];
-                    position = position - 1;
+            while (position >= 0){                  // DONT UNDERSTAND THIS ONE, WHY DOES IT GO BELOW 0 EVER? <- last statement of if statement. 
+                if (array[position] > temp){                      // if my current value is greater than the temp
+                    array[position + 1] = array[position];        // move the greater value one position up.
+                    position = position - 1;                      // decrease position by one to go to the left index. and then keep moving everything to the right. 
                 }
                 else {
-                    break;
+                    break;                                        // if we cannot move to the left anymore then stop. 
                 }
             }
 
-            array[position + 1] = temp;
+            array[position + 1] = temp;                          // if array[position] is not greater than the temp value then the inside loop doesnt run. We just put the temp 
+                                                                // value back in place 
         }
 
         return array;
