@@ -32,15 +32,16 @@ public class OrderedArray {
             }
 
 
-            // if (valueAtMidpoint == target){
-            //     return midpoint;
-            // }
-            // else if (valueAtMidpoint > target){
-            //     lowerbound = midpoint + 1;
-            // }
-            // else {
-            //     upperbound = midpoint -1;
-            // }
+            if (valueAtMidpoint == target){
+                return midpoint;
+            }
+            else if (valueAtMidpoint > target){
+                upperbound = midpoint -1;     
+            
+            }
+            else {
+                lowerbound = midpoint + 1;
+            }
         }
 
         return -1;
